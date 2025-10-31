@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Envíos nacionales rápidos y seguros. Rastrea tus guías y conoce nuestras tarifas.">
+    <title>EnvíaYa - Envíos Nacionales y Rastreo de Guías</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f7f8fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            background-color: #ffcc00;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #ffaa00;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .rastreo {
+            background-color: white;
+            text-align: center;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .rastreo input {
+            width: 60%;
+            padding: 12px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .rastreo button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .servicios {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .servicio {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            flex: 1 1 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .servicio:hover {
+            transform: translateY(-5px);
+        }
+
+        .servicio img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+
+        .testimonios {
+            background-color: #eef5ff;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .testimonios p {
+            font-style: italic;
+            margin: 10px 0;
+        }
+
+        .contacto form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .contacto input, .contacto textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contacto button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #004b80;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            .rastreo input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>EnvíaYa</h1>
+            <ul>
+                <li><a href="#rastreo">Rastreo</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#testimonios">Opiniones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Envíos Nacionales Rápidos y Seguros</h2>
+        <p>Rastrea tus paquetes y confía en el mejor servicio de mensajería de todo el país.</p>
+        <button onclick="document.getElementById('rastreo').scrollIntoView({behavior:'smooth'})">Rastrea tu envío</button>
+    </div>
+
+    <section id="rastreo">
+        <div class="rastreo">
+            <h2>Rastrea tu guía</h2>
+            <p>Ingresa tu número de guía para conocer el estado actual de tu envío.</p>
+            <form onsubmit="event.preventDefault(); alert('Simulando rastreo de guía...');">
+                <input type="text" placeholder="Ej: 1234567890" required>
+                <button type="submit">Rastrear</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <h2 style="text-align:center; margin-bottom:30px;">Nuestros Servicios</h2>
+        <div class="servicios">
+            <div class="servicio">
+                <img src="https://cdn-icons-png.flaticon.com/512/1995/1995623.png" alt="Entrega rápida">
+                <h3>Entrega Exprés</h3>
+                <p>Envía tus paquetes en tiempo récord a cualquier parte del país.</p>
+            </div>
+            <div class="servicio">
+                <img src="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" alt="Paquetería segura">
+                <h3>Paquetería Segura</h3>
+                <p>Embalaje profesional y seguro para proteger tus envíos.</p>
+            </div>
+            <div class="servicio">
+                <img src="https://cdn-icons-png.flaticon.com/512/1239/1239525.png" alt="Rastreo en línea">
+                <h3>Rastreo en Línea</h3>
+                <p>Sigue tu paquete en tiempo real desde cualquier dispositivo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonios" class="testimonios">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <p>"Excelente servicio, mi paquete llegó antes de lo esperado." – Laura P.</p>
+        <p>"El rastreo en línea fue muy preciso, 100% recomendado." – Carlos M.</p>
+        <p>"Rápido, económico y confiable." – Andrea G.</p>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2 style="text-align:center; margin-bottom:20px;">Contáctanos</h2>
+        <form onsubmit="event.preventDefault(); alert('Mensaje enviado correctamente.');">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 EnvíaYa. Todos los derechos reservados.</p>
+        <p><small>Diseñado con 💙 para tus envíos nacionales.</small></p>
+    </footer>
+</body>
+</html>
